@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# DBMS PROJECT OVERVIEW
-=======
-# Keerthi Overview
->>>>>>> keerthi
+# DBMS:MASTER OVERVIEW
   <pre>
   </pre>
