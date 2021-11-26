@@ -1,3 +1,0 @@
-# Keerthi Overview
-  <pre>
-  </pre>
