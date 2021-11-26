@@ -1,3 +1,0 @@
-# Teja Overview
-  <pre>
-  </pre>
