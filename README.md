@@ -1,3 +1,0 @@
-# Jogi Overview
-  <pre>
-  </pre>
