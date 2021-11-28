@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<head>
+<link rel="stylesheet" href="css/reg.css">
+</head>
+<body>
+  <br>
+  <br>
+      <div class="cont">
+          <div class="form sign-in">
+              <h2>Welcome</h2>
+                   <div class="login">
+                      <form action="1.php" method="POST">
+		            <label>
+		                <span>Roll Number</span>
+		                <input type="text" name="Roll_no" required>
+		            </label>
+		            <label>
+		                <span>Password</span>
+		                <input type="password" name="Password" required>
+		            </label>
+		            <input type="submit" name="login" class="submit2"> 
+		        </form>
+                    </div>    
+                </div>
+                <div class="sub-cont">
+                    <div class="img">
+                        <div class="img__text m--up">
+                        
+                            <h3>Don't have an account? Please Sign up!<h3>
+                        </div>
+                        <div class="img__text m--in">
+                        
+                            <h3>If you already has an account, just sign in.<h3>
+                        </div>
+                        <div class="img__btn">
+                            <span class="m--up">Sign Up</span>
+                            <span class="m--in">Sign In</span>
+                        </div>
+                    </div>
+                    <div class="form sign-up">
+                        <h2>Create your Account</h2>
+                        <div class="form2" >
+                            <form action ="1.php" method="POST">
+                                <label>
+                                    <span>Roll Number</span>
+                                    <input type="text" name="Roll_no" required/>
+                                </label>
+                                <label>
+                                    <span>First Name</span>
+                                    <input type="text" name="First_name" required/>
+                                </label>
+                                <label>
+                                    <span>Last Name</span>
+                                    <input type="text" name="Last_name" required />
+                                </label>  
+                                <label>
+                                    <span>Email</span>
+                                    <input type="text" name="Email_id" required/>
+                                </label>
+                                <label>
+                                    <span>Branch</span>
+                                    <input type="text" name="Branch" required/>
+                                </label>
+                                <label>
+                                    <span>Mobile</span>
+                                    <input type="text" name="Mobile" required/>
+                                </label>
+                                <label>
+                                    <span>Password</span>
+                                    <input type="password" name = "Password" required/>
+                                </label>
+                                <input type="submit" name="submit" class="submit">
+                            </form>    
+                        </div>    
+              </div>
+          </div>
+      </div>
+  
+      <script>
+          document.querySelector('.img__btn').addEventListener('click', function() {
+              document.querySelector('.cont').classList.toggle('s--signup');
+          });
+      </script>
+</body>
+</html>
