@@ -9,10 +9,25 @@ if(!$connection){
     die('connection failed:'.mysqli_connect_error());
 }
 else{
-    if(isset($_POST['login'])){
-     $Roll_no=$_POST['Roll_no'];
-     $password=$_POST['Password'];
-     echo $password;
+    if(isset($_POST['login']))
+    {
+	     $Roll_no=$_POST['Roll_no'];
+	     $password=$_POST['Password'];
+	     $sql="SELECT Password from Login where Roll_no='$Roll_no'";
+	     $result=$connection->query($sql);
+		     while($row=$result->fetch_assoc())
+		     {
+		             if($password==$row[Password])
+		             {
+		                header("Location:index.php");
+		                exit();
+		             }
+			     else {
+				 echo "Enter the correct password";
+			     }
+		     }
+	     
+     
     }
     else if(isset($_POST['submit'])){
         $Roll_no=$_POST['Roll_no'];
