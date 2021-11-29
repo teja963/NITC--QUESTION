@@ -21,11 +21,11 @@ else{
 		     
 		             if(strcmp($password,$row["Password"])==0)
 		             {
-		                header("Location: http://localhost/DBMS-PROJECT/index.php");
+		                header("Location: http://localhost/DBMS-PROJECT/HomePage.php");
 		                exit();
 		             }
 			     else {
-				 echo "Enter the correct password";
+				 echo '<script>alert("Enter the correct password")</script>';
 			     }
 			    
 		     }
@@ -43,11 +43,10 @@ else{
         $sql="INSERT INTO `Student` (`Roll_no`, `Email_id`, `Branch`, `First_name`, `Last_name`, `Mobile`,`Id`) VALUES ('$Roll_no', '$Email_id', '$Branch', '$First_name', '$Last_name', '$Mobile', '12345')";
         $sql2="INSERT INTO `Login` (`Roll_no`, `Password`) VALUES ('$Roll_no', '$Password')";
             if ($connection->query($sql) === TRUE and $connection->query($sql2) === TRUE) {
-                echo "New record created successfully! for the student '$First_name' ";
+                echo '<script>alert("New record created successfully!")</script>';
               } 
               elseif ($connection->error == "Duplicate entry '$Roll_no' for key 'PRIMARY'") {
-                echo "INSERTION FAILED!"."<br>";
-                echo "Student with roll number '$Roll_no' already exists!";
+                echo '<script>alert("INSERTION FAILED!Student with this roll number already exists!")</script>';
             
             }
             else{
@@ -76,16 +75,16 @@ else{
               <h2>Welcome</h2>
                    <div class="login">
                       <form action="reg.php" method="POST">
-		            <label>
-		                <span>Roll Number</span>
-		                <input type="text" name="Roll_no" required>
-		            </label>
-		            <label>
-		                <span>Password</span>
-		                <input type="password" name="Password" required>
-		            </label>
-		            <input type="submit" name="login" class="submit2"> 
-		        </form>
+                        <label>
+                            <span>Roll Number</span>
+                            <input type="text" name="Roll_no" required>
+                        </label>
+                        <label>
+                            <span>Password</span>
+                            <input type="password" name="Password" required>
+                        </label>
+                        <input type="submit" name="login" class="submit2"> 
+                    </form>
                     </div>    
                 </div>
                 <div class="sub-cont">

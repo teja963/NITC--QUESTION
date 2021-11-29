@@ -19,7 +19,7 @@ else{
 		     {
 		             if($password==$row[Password])
 		             {
-		                header("Location:index.php");
+		                header("Location: http://localhost/DBMS-PROJECT/HomePage.php");
 		                exit();
 		             }
 			     else {
