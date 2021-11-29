@@ -2,7 +2,9 @@
 var RoleObject = {
     "Intern": {
       "Qualcomm" :[],
-      "GE Healhcare" :[]
+      "GE Healhcare" :[],
+      "Oracle" :[],
+      "JP Morgan" :[]
     },
     "Full Time": {
       "Oracle" : [],
