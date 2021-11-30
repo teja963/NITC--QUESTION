@@ -17,8 +17,8 @@
      
             // Fetch the file information
             $query = "
-                SELECT  `mime`,`size`,`Subject`,`Q_paper`
-                FROM `file`
+                SELECT  `type`,`size`,`Subject`,`Q_paper`
+                FROM `Question_paper`
                 WHERE `Qp_no` = {$id}";
             $result = $dbLink->query($query);
      
@@ -29,7 +29,7 @@
                     $row = mysqli_fetch_assoc($result);
      
                     // Print headers
-                    header("Content-Type: ". $row['mime']);
+                    header("Content-Type: ". $row['type']);
                     header("Content-Length: ". $row['size']);
                     header("Content-Disposition: attachment; filename=". $row['Subject']);
      

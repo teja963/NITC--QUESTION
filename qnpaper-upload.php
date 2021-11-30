@@ -110,17 +110,20 @@
                   <h3 class = "qpHeading">Upload File</h3>
                   <!--Drag and drop box-->
                   <div class="drop-zone d-flex flex-column">
-                    <span class="drop-zone__prompt">Drag and Drop file here <br> or <br> <button class = "browse-button">Browse</button></span>
+                    <span class="drop-zone__prompt">Drag and Drop file here <br> or <br> <label class = "browse-button">Browse</label></span>
                     <input type="file" name="uploaded_file" class="drop-zone__input">
                   </div>
                 </div>
                 <div class="col-12 d-flex flex-row justify-content-center">
                   <button class="upload-button" name= "Submit"> Upload </button>
-                  <button class="upload-button" href="list_files.php">See all files</button> 
+                  </form>
+                  <form action="see_files.php" method="POST">
+                  <button class="upload-button"  name="Submit">See all files</button>
+                  </form> 
                 </div>
               </div>
             </div>
-          </form>
+          
         </div>
       </div>
       <script src="js/qnpaper-upload.js"></script>
