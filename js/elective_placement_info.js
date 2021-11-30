@@ -19,6 +19,20 @@ var Course_IDObject = {
     "Object Oriented Systems"    : ["Saritha"]
   }
 }
+
+var RoleObject = {
+  "Intern": {
+    "Qualcomm" :[],
+    "GE Healhcare" :[],
+    "Oracle" :[],
+    "JP Morgan" :[]
+  },
+  "Full Time": {
+    "Oracle" : [],
+    "Cisco" : []
+  }
+}
+
 window.onload = function() {
   var Course_IDSel = document.getElementById("Course_ID");
   var Course_nameSel = document.getElementById("Course_name");
@@ -44,7 +58,18 @@ window.onload = function() {
         Faculty_nameSel.options[Faculty_nameSel.options.length] = new Option(z[i], z[i]);
     }
   }
+  var RoleSel = document.getElementById("Role");
+  var Company_nameSel =document.getElementById("Company_name");    
+  for (var x in RoleObject) 
+  {
+    RoleSel.options[RoleSel.options.length] = new Option(x, x);
+  }
+  RoleSel.onchange = function() {
+    
+      Company_nameSel.length = 1;
+      for (var y in RoleObject[this.value]) 
+      {
+  Company_nameSel.options[Company_nameSel.options.length] = new Option(y, y);
+      }
+  }      
 }
-
-
-
