@@ -1,0 +1,63 @@
+.home-bg{
+    background-color:teal;
+    opacity : 0.6;
+}
+
+.home-bg:hover{
+    opacity:1.0;
+}
+
+.homepage-info{
+    font-size: 50px;
+    font-weight:600;
+}
+
+.homepage-para{
+    font-size:20px;
+}
+
+.info-details{
+    font-size:20px;
+}
+
+.dropdown-option{
+    border-radius: 5px;
+    padding:6px;
+    color:teal;
+    border-color: teal;
+}
+
+.elective-gap{
+    margin-top: 100px;
+    margin-right: 50px;
+}
+
+.placement-gap{
+    margin-top: 100px;
+    margin-left: 50px;
+    margin-bottom: 60px;
+}
+
+.qpaper-gap{
+    margin-left: 50px;
+}
+
+
+      *{
+          margin: 10;
+          padding: 10;
+       }
+       body{
+          background-color:teal;
+          font-family: sans-serif;
+          background-image: url("https://res.cloudinary.com/bhavana2002/image/upload/v1638187003/rajpath_j7zteu.jpg");
+          background-size: cover;
+       }
+
+       #name{
+       width: 80%;
+       padding: 5px;
+       border-radius: 5%;
+       outline:0;
+       border: 1px solid lightgreen;
+       }
