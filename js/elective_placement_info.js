@@ -23,12 +23,12 @@ var Course_IDObject = {
 var RoleObject = {
   "Intern": {
     "Qualcomm" :[],
-    "GE Healhcare" :[],
+    "GE Healthcare" :[],
     "Oracle" :[],
     "JP Morgan" :[]
   },
   "Full Time": {
-    "Oracle" : [],
+    "Amazon" : [],
     "Cisco" : []
   }
 }

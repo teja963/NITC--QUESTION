@@ -33,7 +33,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script>
         var Company_nameObject = {
-          "Oracle_I": {
+          "Oracle": {
             "Intern" :[],
             "Full Time" :[]
           },
