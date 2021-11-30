@@ -63,7 +63,7 @@
         <div class="w3-top">
             <div class="w3-bar w3-theme-d2 w3-left-align">
             <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-            <a href="#" class="w3-bar-item w3-button"><i class="fa fa-home w3-margin-right"></i>NITC Question Bank</a>
+            <a href="HomePage.php" class="w3-bar-item w3-button"><i class="fa fa-home w3-margin-right"></i>NITC Question Bank</a>
             <a href="#QnPaper" class="w3-bar-item w3-button w3-hide-small w3-hover-white w3-teal">QPaper</a>
             <a href="#ElectiveInfo" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Elective Info</a>
             <a href="#PlacementInfo" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Placement Info</a>
@@ -78,11 +78,11 @@
             </div>
         </div>    
 
-      <div class = "w3-padding-64">
+        <div class = "w3-padding-64">
         <h1 class = "text-center">Download Question Paper</h1>
         <!--choosing year, branch and subjects-->
         <div class="m-3">
-          <form method="post" enctype="multipart/form-data">
+          <form action="list_files.php" method="post" enctype="multipart/form-data">
             <div class="container-fluid">
               <div class="row">
                 <div class="col-md-6">
@@ -101,14 +101,14 @@
                     </select>
                 </div>
                 <div class="col-12 d-flex flex-row justify-content-center">
-                </form>
-                <form action="list_files.php" method="POST">
-                  <button class="upload-button" name= "Submit"> Download </button>
-                  </form> 
+                
+                
+                  <button type="submit" class="upload-button" name= "Submit"> Download </button>
+                   
                 </div>
               </div>
             </div>
-          
+          </form>
         </div>
       </div>
       <script src="js/qnpaper-upload.js"></script>

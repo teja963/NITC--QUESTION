@@ -1,24 +1,22 @@
 <?php
 
-    if(isset($_POST['Submit']))
-	{
-    // Connect to the database
-		    $dbLink = new mysqli('localhost', 'root', '', 'nitcq');
-		    if(mysqli_connect_errno()) {
-			die("MySQL connection failed: ". mysqli_connect_error());
-		    }
-		    $Branch=$_POST['Branch'];
-		    $Year=$_POST['Year'];
-		    $Subject=$_POST['Subject'];
-		    // Query for a list of all existing files
-		    $sql = "SELECT `Qp_no`, `Qp_name`, `Branch`, `Year`, `Subject` FROM `Question_paper`";
-		    $result = $dbLink->query($sql);
-		     
-		    // Check if it was successfull
-		    echo "hello1";
+if(isset($_POST['Submit']))
+{
+// Connect to the database
+		$dbLink = new mysqli('localhost', 'root', '', 'nitcq');
+		if(mysqli_connect_errno()) {
+		die("MySQL connection failed: ". mysqli_connect_error());
+		}
+		$Branch=$_POST['Branch'];
+		$Year=$_POST['Year'];
+		$Subject=$_POST['Subject'];
+		// Query for a list of all existing files
+		$sql = "SELECT `Qp_no`, `Qp_name`, `Branch`, `Year`, `Subject` FROM `Question_paper` WHERE '$Branch'=`Branch` AND '$Year'= `Year` AND '$Subject' = `Subject`";
+		$result = $dbLink->query($sql);
+		 
+		
 		    if($result) {
-			// Make sure there are some files in there
-					echo "hello2";
+			
 					if($result->num_rows == 0)
 					{
 						echo '<p>There are no files in the database</p>';
@@ -30,7 +28,7 @@
 							<tr>
 								<td><b>Qp_no</b></td>
 								<td><b>Qp_name</b></td>
-								<td><b>Branch</b></td>
+								<td><b>Branch</b></td> 
 								<td><b>Year</b></td>
 								<td><b>Subject</b></td>
 								<td><b>&nbsp;</b></td>
