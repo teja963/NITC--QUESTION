@@ -156,7 +156,7 @@
           <option value="" selected="selected">Please Select Role First</option>
         </select>
         <br> 
-        <button type="submit" class="w3-button w3-right w3-theme-l1" name="Submit">Get Info</button>
+        <button type="submit" class="w3-button w3-right w3-theme-l1" name="Submit1">Get Info</button>
       </form>
     </div>
   </div>
@@ -170,8 +170,7 @@
   <p><i class="fa fa-envelope-o w3-text-teal w3-xlarge"></i>  test@test.com</p>
 </footer>
 
-<script src="js/electiveinfo.js"></script>
-<script src="js/placement_info.js"></script>
+<script src="js/elective_placement_info.js"></script>
 
                   <script>
                   // Script for side navigation
