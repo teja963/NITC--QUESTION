@@ -1,6 +1,6 @@
 <?php
     // Connect to the database
-    $dbLink = new mysqli('localhost', 'root', '', 'myTable');
+    $dbLink = new mysqli('localhost', 'root', '', 'nitcq');
     if(mysqli_connect_errno()) {
         die("MySQL connection failed: ". mysqli_connect_error());
     }
