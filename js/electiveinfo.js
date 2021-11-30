@@ -16,7 +16,7 @@ var Course_IDObject = {
     "Foundations of Programming" : ["Vinod Pathari"]
   },
   "CS3007D": {
-    "Object Oriented Systems"    : [""]
+    "Object Oriented Systems"    : ["Saritha"]
   }
 }
 window.onload = function() {

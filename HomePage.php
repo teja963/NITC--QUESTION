@@ -2,6 +2,7 @@
 
 <!DOCTYPE html>
 <html>
+  <head>
 <title>NITC QUESTION BANK</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,6 +12,9 @@
 
 
 <link rel="stylesheet" href="css/HomePage.css">
+
+
+  </head>
 <body id="HomePage">
 
 <!-- Sidebar on click -->
@@ -132,6 +136,7 @@
   </div>
 </div>
 
+
 <!--placement info-->
 <div class="w3-container w3-padding-64 w3-theme-l5 placement-gap" id="PlacementInfo">
   <div class="w3-row">
@@ -140,18 +145,18 @@
       <p>Description</p>
     </div>
     <div class="w3-col m5">
-      <form class="w3-container w3-card-4 w3-padding-16 w3-white" action="/action_page.php" target="_blank">
-        <h1 class="info-details">Company Name:</h1> 
-        <select class = "dropdown-option" name="Company_name" id="Company_name" required>
-          <option value="" selected="selected">Select Company Name</option>
+      <form class="w3-container w3-card-4 w3-padding-16 w3-white" action="display.php" target="_blank" method="POST">
+         <h1 class="info-details">Role:</h1> 
+        <select class = "dropdown-option" name="Role" id="Role" required>
+            <option value="" selected="selected">Please select Role</option>
         </select>
         <br>
-        <h1 class="info-details">Role:</h1> 
-        <select class = "dropdown-option" name="Role" id="Role" required>
-            <option value="" selected="selected">Please select Company Name first</option>
+         <h1 class="info-details">Company Name:</h1> 
+        <select class = "dropdown-option" name="Company_name" id="Company_name" required>
+          <option value="" selected="selected">Please Select Role First</option>
         </select>
         <br> 
-        <button type="submit" class="w3-button w3-right w3-theme-l1">Get Info</button>
+        <button type="submit" class="w3-button w3-right w3-theme-l1" name="Submit">Get Info</button>
       </form>
     </div>
   </div>
