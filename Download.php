@@ -25,8 +25,8 @@
             "EEE": ["bleh1", "bleh2", "bleh3", "bleh4"]    
           },
           "2": {
-            "PHP": ["Variables", "Strings", "Arrays"],
-            "SQL": ["SELECT", "UPDATE", "DELETE"]
+            "CSE": ["Variables", "Strings", "Arrays"],
+            "ECE": ["SELECT", "UPDATE", "DELETE"]
           }
         }
         window.onload = function() {
@@ -111,6 +111,6 @@
           
         </div>
       </div>
-      <script src="qnpaper-upload.js"></script>
+      <script src="js/qnpaper-upload.js"></script>
   </body>
 </html>
