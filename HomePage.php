@@ -100,7 +100,7 @@
       <p>Description</p>
     </div>
     <div class="w3-col m5">
-      <form class="w3-container w3-card-4 w3-padding-16 w3-white" action="display.php" target="_blank" method="POST">
+      <form class="w3-container w3-card-4 w3-padding-16 w3-white" action="display.php" target="_blank" method="POST" >
             <table>
                 <tr>
                   <td>
@@ -170,33 +170,35 @@
   <p><i class="fa fa-envelope-o w3-text-teal w3-xlarge"></i>  test@test.com</p>
 </footer>
 
-<script>
-// Script for side navigation
-function w3_open() {
-  var x = document.getElementById("mySidebar");
-  x.style.width = "300px";
-  x.style.paddingTop = "10%";
-  x.style.display = "block";
-}
-
-// Close side navigation
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-}
-
-// Used to toggle the menu on smaller screens when clicking on the menu button
-function openNav() {
-  var x = document.getElementById("navDemo");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
-</script>
-
-
-<script src="js/placement_info.js"></script>
 <script src="js/electiveinfo.js"></script>
+<script src="js/placement_info.js"></script>
+
+                  <script>
+                  // Script for side navigation
+                  function w3_open() {
+                    var x = document.getElementById("mySidebar");
+                    x.style.width = "300px";
+                    x.style.paddingTop = "10%";
+                    x.style.display = "block";
+                  }
+
+                  // Close side navigation
+                  function w3_close() {
+                    document.getElementById("mySidebar").style.display = "none";
+                  }
+
+                  // Used to toggle the menu on smaller screens when clicking on the menu button
+                  function openNav() {
+                    var x = document.getElementById("navDemo");
+                    if (x.className.indexOf("w3-show") == -1) {
+                      x.className += " w3-show";
+                    } else { 
+                      x.className = x.className.replace(" w3-show", "");
+                    }
+                  }
+
+
+                  </script>
+
 </body>
 </html>
