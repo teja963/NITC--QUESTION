@@ -19,12 +19,12 @@
       <!--js for dropdowns-->
       <script>
         var subjectObject = {
-          "1st Year": {
+          "1": {
             "CSE": ["Moonji1", "Moonji2", "Moonji3", "Moonji4"],
             "ECE": ["Resistors", "conductors", "DSA", "bleh"],
             "EEE": ["bleh1", "bleh2", "bleh3", "bleh4"]    
           },
-          "2nd Year": {
+          "2": {
             "CSE": ["Variables", "Strings", "Arrays"],
             "ECE": ["SELECT", "UPDATE", "DELETE"]
           }
@@ -82,7 +82,7 @@
         <h1 class = "text-center">Upload Question Paper</h1>
         <!--choosing year, branch and subjects-->
         <div class="m-3 mt-5">
-          <form method="post" enctype="multipart/form-data">
+          <form method="post" enctype="multipart/form-data" action="add_file.php">
             <div class="container-fluid">
               <div class="row">
                 <div class="col-md-6">
@@ -111,11 +111,11 @@
                   <!--Drag and drop box-->
                   <div class="drop-zone d-flex flex-column">
                     <span class="drop-zone__prompt">Drag and Drop file here <br> or <br> <button class = "browse-button">Browse</button></span>
-                    <input type="file" name="myFile" class="drop-zone__input">
+                    <input type="file" name="uploaded_file" class="drop-zone__input">
                   </div>
                 </div>
                 <div class="col-12 d-flex flex-row justify-content-center">
-                  <button class="upload-button" name= "btn"> Upload </button>
+                  <button class="upload-button" name= "Submit"> Upload </button>
                   <button class="upload-button" href="list_files.php">See all files</button> 
                 </div>
               </div>
