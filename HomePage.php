@@ -79,8 +79,11 @@
               <div class="w3-padding-16"><span class="w3-xlarge w3-border-teal w3-bottombar">Question Papers</span></div>
                 <p>Users can upload previous year's question papers as well as download them <br> for their respective courses provided in the dropdown options.</p>
                 <button type="submit" class="w3-button w3-center w3-theme-l1" name="upload">Upload Paper</button>
-                <button type="submit" class="w3-button w3-center w3-theme-l1" name="download">Download Paper</button>
-            </form>
+                 </form>
+                 <form action="Download.php" method="POST">
+                <button type="submit" class="w3-button w3-center w3-theme-l1" name="Submit">Download Paper</button>
+                </form>
+           
           </div>
       </div>
         <div class="w3-col m6">
