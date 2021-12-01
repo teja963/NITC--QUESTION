@@ -51,7 +51,7 @@ create table refers(
  );
  
 create table Reference_Notes(
- R_id int not null primary key,
+ R_id int not null primary key auto increment,
  Branch varchar(45) not null,
  Notes longblob not null,
  Subject varchar(45) not null,

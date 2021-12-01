@@ -87,9 +87,11 @@
           </div>
       </div>
         <div class="w3-col m6">
+           <form action="refnotes.php" method="POST">
           <div class="w3-padding-16"><span class="w3-xlarge w3-border-teal w3-bottombar">Reference notes</span></div>
           <p>Description</p>
-          <button type="submit" class="w3-button w3-center w3-theme-l1">Get Info</button>
+          <button type="submit" class="w3-button w3-center w3-theme-l1" name="Submit">Get Info</button>
+          </form>	
         </div>
       </div>
   </div>
@@ -103,7 +105,7 @@
       <p>Description</p>
     </div>
     <div class="w3-col m5">
-      <form class="w3-container w3-card-4 w3-padding-16 w3-white" action="display1.php" target="_blank" method="POST" >
+      <form class="w3-container w3-card-4 w3-padding-16 w3-white" action="show/display1.php" target="_blank" method="POST" >
             <table>
                 <tr>
                   <td>
@@ -148,7 +150,7 @@
       <p>Description</p>
     </div>
     <div class="w3-col m5">
-      <form class="w3-container w3-card-4 w3-padding-16 w3-white" action="display2.php" target="_blank" method="POST">
+      <form class="w3-container w3-card-4 w3-padding-16 w3-white" action="show/display2.php" target="_blank" method="POST">
               <h1 class="info-details">Role:</h1> 
               <select class = "dropdown-option" name="Role" id="Role" required>
                   <option value="" selected="selected">Please select Role</option>

@@ -1,0 +1,32 @@
+.dropdowns{
+    border-radius: 5px;
+    padding:5px;
+    color: teal;
+    border-color: teal;
+    font-family: "Poppins", sans-serif;
+}
+
+.qpHeading{
+    font-size:25px;
+    font-family: "Poppins", sans-serif;
+}
+
+.qpDetails{
+    margin-top:10px;
+    font-family: "Poppins", sans-serif;
+}
+
+
+.upload-button{
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    background:teal;
+    color:white;
+    border-radius: 5px;
+    border-style: none;
+    cursor: pointer;
+    width:250px;
+    margin-top: 70px;
+}
+
