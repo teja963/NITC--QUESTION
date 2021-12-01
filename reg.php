@@ -65,25 +65,34 @@ else{
 
 <!DOCTYPE HTML>
 <head>
-<link rel="stylesheet" href="css/reg.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/reg.css">
 </head>
 <body>
   <br>
   <br>
       <div class="cont">
           <div class="form sign-in">
-              <h2>Welcome</h2>
-                   <div class="login">
+              <div class="d-flex flex-row">
+                <img src="https://res.cloudinary.com/bhavana2002/image/upload/v1638264504/NITC_light_k5u9eh.png" class="nitc-logo"/>
+                <h2 style="font-weight:700;" class="pt-3">Welcome to NITC Question Bank</h2>
+              </div>
+                   <div class="login m-5">
                       <form action="reg.php" method="POST">
                         <label>
-                            <span>Roll Number</span>
+                            <span style="color: rgb(71, 71, 71);">Roll Number</span>
                             <input type="text" name="Roll_no" required>
                         </label>
                         <label>
-                            <span>Password</span>
+                            <span style="color: rgb(71, 71, 71);">Password</span>
                             <input type="password" name="Password" required>
                         </label>
-                        <input type="submit" name="login" class="submit2"> 
+                        <div class="d-flex flex-row justify-content-center">
+                            <input type="submit" name="login" class="submit2"> 
+                        </div>
                     </form>
                     </div>    
                 </div>
@@ -103,38 +112,40 @@ else{
                         </div>
                     </div>
                     <div class="form sign-up">
-                        <h2>Create your Account</h2>
+                        <h2 style="font-weight:700;">Create your Account</h2>
                         <div class="form2" >
                             <form action ="reg.php" method="POST">
                                 <label>
-                                    <span>Roll Number</span>
+                                    <span style="color: rgb(71, 71, 71);">Roll Number</span>
                                     <input type="text" name="Roll_no" required/>
                                 </label>
                                 <label>
-                                    <span>First Name</span>
+                                    <span style="color: rgb(71, 71, 71);">First Name</span>
                                     <input type="text" name="First_name" required/>
                                 </label>
                                 <label>
-                                    <span>Last Name</span>
+                                    <span style="color: rgb(71, 71, 71);">Last Name</span>
                                     <input type="text" name="Last_name" required />
                                 </label>  
                                 <label>
-                                    <span>Email</span>
+                                    <span style="color: rgb(71, 71, 71);">Email</span>
                                     <input type="text" name="Email_id" required/>
                                 </label>
                                 <label>
-                                    <span>Branch</span>
+                                    <span style="color: rgb(71, 71, 71);">Branch</span>
                                     <input type="text" name="Branch" required/>
                                 </label>
                                 <label>
-                                    <span>Mobile</span>
+                                    <span style="color: rgb(71, 71, 71);">Mobile</span>
                                     <input type="text" name="Mobile" required/>
                                 </label>
                                 <label>
-                                    <span>Password</span>
+                                    <span style="color: rgb(71, 71, 71);">Password</span>
                                     <input type="password" name = "Password" required/>
                                 </label>
-                                <input type="submit" name="submit" class="submit">
+                                <div class="d-flex flex-row justify-content-center">
+                                    <input type="submit" name="submit" class="submit">
+                                </div>
                             </form>    
                         </div>    
               </div>
@@ -148,5 +159,3 @@ else{
       </script>
 </body>
 </html>
-
-

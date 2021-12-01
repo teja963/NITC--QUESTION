@@ -25,8 +25,8 @@
             "EEE": ["bleh1", "bleh2", "bleh3", "bleh4"]    
           },
           "2nd Year": {
-            "PHP": ["Variables", "Strings", "Arrays"],
-            "SQL": ["SELECT", "UPDATE", "DELETE"]
+            "CSE": ["Variables", "Strings", "Arrays"],
+            "ECE": ["SELECT", "UPDATE", "DELETE"]
           }
         }
         window.onload = function() {
@@ -81,19 +81,21 @@
       <div class = "w3-padding-64">
         <h1 class = "text-center">Upload Question Paper</h1>
         <!--choosing year, branch and subjects-->
-        <div class="m-3">
+        <div class="m-3 mt-5">
           <form method="post" enctype="multipart/form-data">
             <div class="container-fluid">
               <div class="row">
                 <div class="col-md-6">
                   <h1 class = "qpHeading">Enter the following details</h1>
+                  <h4 class="qpDetails">Roll Number </h4>
+                  <input class = "rollnumber" type="text" id="Roll_no" name="Roll_no" placeholder="Enter in capital letters"><br>
                   <h4 class="qpDetails">Year </h4>
                     <select class = "dropdowns" name="Year" id="Year">
                       <option value="" selected="selected">Select Year</option>
                     </select>
                   <h4 class="qpDetails">Branch </h4>
                     <select class = "dropdowns" name="Branch" id="Branch">
-                      <option value="" selected="selected">Select Branch</option>
+                      <option value="" selected="selected">Select year first</option>
                     </select>
                   <h4 class="qpDetails">Subject </h4>
                     <select class = "dropdowns" name="Subject" id="Subject">
@@ -101,7 +103,10 @@
                     </select>
                 </div>
         
-                <div class="col-md-6">
+                <div class="col-md-6 mt-4">
+                    <div class="d-sm-block d-md-none">
+                        <hr>
+                    </div>
                   <h3 class = "qpHeading">Upload File</h3>
                   <!--Drag and drop box-->
                   <div class="drop-zone d-flex flex-column">
@@ -110,7 +115,8 @@
                   </div>
                 </div>
                 <div class="col-12 d-flex flex-row justify-content-center">
-                  <button class="upload-button" name= "btn"> UPLOAD </button> 
+                  <button class="upload-button" name= "btn"> Upload </button>
+                  <button class="upload-button" href="list_files.php">See all files</button> 
                 </div>
               </div>
             </div>
