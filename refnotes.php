@@ -20,14 +20,25 @@
       <script>
         var subjectObject = {
           "1": {
-            "CSE": ["Moonji1", "Moonji2", "Moonji3", "Moonji4"],
-            "ECE": ["Resistors", "conductors", "DSA", "bleh"],
-            "EEE": ["bleh1", "bleh2", "bleh3", "bleh4"]    
+            "CSE": ["Maths", "Physics", "Chemistry", "Mechanics", "BES", "Computer programming"],
+            "ECE": ["Maths", "Physics", "Chemistry", "Mechanics", "BES", "Computer programming"],
+            "CE": ["Maths", "Physics", "Chemistry", "Mechanics", "BES", "Computer programming"],
+            "CH": ["Maths", "Physics", "Chemistry", "Mechanics", "BES", "Computer programming"]
           },
           "2": {
-            "CSE": ["PPL", "Moonji2", "Moonji3", "Moonji4"],
-            "PHP": ["Variables", "Strings", "Arrays"],
-            "SQL": ["SELECT", "UPDATE", "DELETE"]
+            "CSE": ["Maths", "Logic Design", "Program Design", "Discrete Structures", "Computer Organization", "DSA"],
+            "CE": ["Mechanics of solids", "Surveying", "Mechanics of fluids", "Building Technology", "Structural analysis"],
+            "MSE": ["Structure of materials", "Thermodynamics", "Fluid mechanics", "Heat transfer"],
+          },
+          "3": {
+            "CSE": ["PPL", "Theory of Computation", "Database Management Systems", "Operating Systems"],
+            "CE": ["Structural design", "Numericsl methods", "Transportation engineering", "Structural analysis"],
+            "MSE": ["Thermal engineering", "Semiconductors nanostructures", "Bio-materials"]
+          },
+          "4": {
+            "CSE": ["Artificial Intelligence", "ML"],
+            "CE": ["Environmental engineering", "Construction management", "Water resource engineering"],
+            "MSE": ["Energy materials and technology", "Corrosion science and engineering", "Industrial Economics"]
           }
         }
         window.onload = function() {
@@ -59,7 +70,7 @@
       </script>
 
     </head>
-    <body>
+    <body class="ref-bg">
         <!-- Navbar -->
         <div class="w3-top">
             <div class="w3-bar w3-theme-d2 w3-left-align">
@@ -80,31 +91,27 @@
         </div>    
 
       <div class = "w3-padding-64">
-        <h1 class = "text-center">Download Reference notes</h1>
+        <h1 class = "text-center text-white">Download Reference notes</h1>
         <!--choosing year, branch and subjects-->
-        <div class="w3-card-4 w3-margin m-3">
+        <div class="w3-card-4 download-card">
           <form method="post" enctype="multipart/form-data">
-            <div class="container-fluid">
-              <div class="row">
-                <div class="col-md-6">
-                  <h1 class = "qpHeading">Enter the following details</h1>
-                  <h4 class="qpDetails">Year </h4>
-                    <select class = "dropdowns" name="Year" id="Year">
-                      <option value="" selected="selected">Select Year</option>
-                    </select>
-                  <h4 class="qpDetails">Branch </h4>
-                    <select class = "dropdowns" name="Branch" id="Branch">
-                      <option value="" selected="selected">Select Branch</option>
-                    </select>
-                  <h4 class="qpDetails">Subject </h4>
-                    <select class = "dropdowns" name="Subject" id="Subject">
-                      <option value="" selected="selected">Please select Branch first</option>
-                    </select>
-                </div>
-                <div class="col-12 d-flex flex-row justify-content-center">
-                  <button type="submit" class="upload-button" name= "Submit"> Download Reference notes </button> 
-                </div>
-             </div>
+            <div>
+              <h1 class = "qpHeading">Enter the details</h1>
+                <h4 class="qpDetails">Year </h4>
+                  <select class = "dropdowns" name="Year" id="Year">
+                    <option value="" selected="selected">Select Year</option>
+                  </select>
+                <h4 class="qpDetails">Branch </h4>
+                  <select class = "dropdowns" name="Branch" id="Branch">
+                    <option value="" selected="selected">Select Branch</option>
+                  </select>
+                <h4 class="qpDetails">Subject </h4>
+                  <select class = "dropdowns" name="Subject" id="Subject">
+                    <option value="" selected="selected">Please select Branch first</option>
+                  </select>
+            </div>
+            <div class="col-12 d-flex flex-row justify-content-center">
+              <button type="submit" class="download-button" name= "Submit"> Download Reference notes </button> 
             </div>
           </form>
           <?php
