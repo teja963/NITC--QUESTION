@@ -1,0 +1,32 @@
+.files-card{
+    padding:20px;
+    margin-left:100px;
+    margin-right: 100px;
+    margin-top: 20px;
+    text-align: center;
+    background-color: whitesmoke;
+    border-radius: 10px;
+}
+
+.back-button{
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    background:teal;
+    color:white;
+    border-radius: 5px;
+    border-style: none;
+    cursor: pointer;
+    width:100px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left:25px;
+}
+
+.seefiles-heading{
+    font-size:25px;
+    font-family: "Poppins", sans-serif;
+    font-weight:600;
+    text-decoration: underline teal 5px;
+    margin-bottom: 20px;
+}

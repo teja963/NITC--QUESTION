@@ -1,8 +1,8 @@
 <?php
     // Make sure an ID was passed
-    if(isset($_GET['Qp_no'])) {
+    if(isset($_GET['R_id'])) {
     // Get the ID
-        $id = intval($_GET['Qp_no']);
+        $id = intval($_GET['R_id']);
      
         // Make sure the ID is in fact a valid ID
         if($id <= 0) {
@@ -17,9 +17,9 @@
      
             // Fetch the file information
             $query = "
-                SELECT  `type`,`size`,`Subject`,`Q_paper`
-                FROM `Question_paper`
-                WHERE `Qp_no` = {$id}";
+                SELECT  `ref_name`,`Type`,`size`,`Subject`,`Notes`
+                FROM `Reference_Notes`
+                WHERE `R_id` = {$id}";
             $result = $dbLink->query($query);
      
             if($result) {
@@ -29,12 +29,12 @@
                     $row = mysqli_fetch_assoc($result);
      
                     // Print headers
-                    header("Content-Type: ". $row['type']);
+                    header("Content-Type: ". $row['Type']);
                     header("Content-Length: ". $row['size']);
-                    header("Content-Disposition: attachment; filename=". $row['Subject']);
+                    header("Content-Disposition: attachment; filename=". $row['ref_name']);
      
                     // Print data
-                    echo $row['Q_paper'];
+                    echo $row['Notes'];
                 }
                 else {
                     echo 'Error! No image exists with that ID.';

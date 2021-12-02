@@ -1,0 +1,60 @@
+.home-top{
+    background-image: url('https://res.cloudinary.com/bhavana2002/image/upload/v1638386647/banner_img_j4whaq.png'); 
+    background-size:cover; 
+    background-attachment: fixed; 
+    background-position:center; 
+    background-repeat: no-repeat; 
+}
+
+.homepage-info{
+    font-size: 50px;
+    font-weight:600;
+    margin-bottom: 200px;
+    margin-top:60px;
+}
+
+.homepage-para{
+    font-size:26px;
+    color:sandybrown
+}
+
+.info-details{
+    font-size:20px;
+}
+
+.dropdown-option{
+    border-radius: 5px;
+    padding:6px;
+    color:teal;
+    border-color: teal;
+}
+
+.elective-gap{
+    margin-top: 100px;
+    margin-left: 50px;
+}
+
+.placement-gap{
+    margin-top: 100px;
+    margin-bottom: 60px;
+    margin-right: 50px;
+}
+
+      *{
+          margin: 10;
+          padding: 10;
+       }
+       body{
+          background-color:teal;
+          font-family: sans-serif;
+          background-image: url("https://res.cloudinary.com/bhavana2002/image/upload/v1638187003/rajpath_j7zteu.jpg");
+          background-size: cover;
+       }
+
+       #name{
+       width: 80%;
+       padding: 5px;
+       border-radius: 5%;
+       outline:0;
+       border: 1px solid lightgreen;
+       }
