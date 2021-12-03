@@ -58,6 +58,7 @@
      <div class="w3-card-4 w3-margin w3-white">
         <div class="w3-container">
                	<?php
+     // Connect to the database
 		 $host='localhost';
 		 $user='root';
 		 $pass='';
@@ -68,17 +69,21 @@
 			     $Company_name = $_POST['Company_name'];
                                $Role = $_POST['Role'];
  
- 
+        //  Fetch Placement information from the database
 				$query = "SELECT * FROM `Placement_info` WHERE `Company_name` ='$Company_name' AND `Role` ='$Role'";
-				if($result = $mysqli->query($query)){
+				 // Execute the query
+        if($result = $mysqli->query($query)){
+           // Get the row
 				if ($row = $result->fetch_assoc()) {
 
+           
 					$Company_name = $row["Company_name"];
 					$Role = $row["Role"];
 					$CTC = $row["CTC"];
 					$Reference = $row["Reference"];
 					$Interview_exp = $row["Interview_exp"];
-                               
+        
+           // Print data
 				echo "<h3><b>Company_name:</b> $Company_name</h3>".'<br />';
 				echo "<h4><b>Role:</b></h4><h5> $Role</h5>".'<br />';
 				echo "<h4><b>CTC:</b></h4><h5> $CTC</h5>".'<br />';

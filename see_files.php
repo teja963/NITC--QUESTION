@@ -58,7 +58,7 @@
                     die("MySQL connection failed: ". mysqli_connect_error());
                 }
                 
-                // Query for a list of all existing files
+                //  Query for all files that satisfy the given condition
                 $sql = 'SELECT  `Qp_name`, `Branch`, `Year`, `Subject` FROM `Question_paper`';
                 $result = $dbLink->query($sql);
                 

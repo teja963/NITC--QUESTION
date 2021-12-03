@@ -1,10 +1,10 @@
 <?php
-    // Make sure an ID was passed
+    // Make sure an Qp_no was passed
     if(isset($_GET['Qp_no'])) {
     // Get the ID
         $id = intval($_GET['Qp_no']);
      
-        // Make sure the ID is in fact a valid ID
+        // Make sure it is a valid id
         if($id <= 0) {
             die('The ID is invalid!');
         }
@@ -15,7 +15,7 @@
                 die("MySQL connection failed: ". mysqli_connect_error());
             }
      
-            // Fetch the file information
+            // Fetch the Question paper information
             $query = "
                 SELECT  `Qp_name`,`type`,`size`,`Subject`,`Q_paper`
                 FROM `Question_paper`

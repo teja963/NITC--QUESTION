@@ -10,7 +10,7 @@ if(isset($_POST['Submit']))
 		$Branch=$_POST['Branch'];
 		$Year=$_POST['Year'];
 		$Subject=$_POST['Subject'];
-		// Query for a list of all existing files
+		// Query for all Question papers that satisfy the given condition
 		$sql = "SELECT `Qp_no`, `Qp_name`, `Branch`, `Year`, `Subject` FROM `Question_paper` WHERE '$Branch'=`Branch` AND '$Year'= `Year` AND '$Subject' = `Subject`";
 		$result = $dbLink->query($sql);
 		 
@@ -23,7 +23,7 @@ if(isset($_POST['Submit']))
 					}
 					else
 					 {
-						// Print the top of a table
+						// Print the column heading of the table
 						echo '<table width="100%">
 							<tr>
 								<td><b>Qp_no</b></td>

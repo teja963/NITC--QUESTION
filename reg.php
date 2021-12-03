@@ -1,13 +1,18 @@
 
 <?php
+
+//connect to the database
 $servername="localhost";
 $username="root";
 $password="";
 $database="Nitcq";
 $connection=mysqli_connect($servername,$username,$password,$database);
+
+//check if the connection is successful
 if(!$connection){
     die('connection failed:'.mysqli_connect_error());
 }
+//if 'login' button is clicked
 else{
     if(isset($_POST['login']))
     {
@@ -15,26 +20,32 @@ else{
 	     $password=$_POST['Password'];
 	     $sql="SELECT Password from Login where Roll_no='$Roll_no'";
 	     $result=$connection->query($sql);
+
+          // Make sure the result is valid
          if($result->num_rows!=0){
+             //  Get the row
 		     while($row=$result->fetch_assoc())
 		      {
-		     
+		           //successful login
 		             if(strcmp($password,$row["Password"])==0)
 		             {
 		                header("Location: http://localhost/DBMS-PROJECT/HomePage.php");
 		                exit();
 		             }
+                //if the password is wrong
 			     else {
 				 echo '<script>alert("Enter the correct password")</script>';
 			     }
 			    
 		     }
             }
+            //incorrect information
             else{
                 echo '<script>alert("Roll no and password do not match ")</script>';
             }
      
     }
+    // sign up
     else if(isset($_POST['submit'])){
         $Roll_no=$_POST['Roll_no'];
         $First_name=$_POST['First_name'];
@@ -43,18 +54,24 @@ else{
         $Branch=$_POST['Branch'];
         $Mobile=$_POST['Mobile'];
         $Password=$_POST['Password'];
+        
+        //insert information into 'student' and 'login' tables
         $sql="INSERT INTO `Student` (`Roll_no`, `Email_id`, `Branch`, `First_name`, `Last_name`, `Mobile`,`Id`) VALUES ('$Roll_no', '$Email_id', '$Branch', '$First_name', '$Last_name', '$Mobile', '12345')";
         $sql2="INSERT INTO `Login` (`Roll_no`, `Password`) VALUES ('$Roll_no', '$Password')";
+           //check if the connection is successful
             if ($connection->query($sql) === TRUE and $connection->query($sql2) === TRUE) {
                 echo '<script>alert("New record created successfully!")</script>';
               } 
+              //error message displayed if the inserted values are duplicate
               elseif ($connection->error == "Duplicate entry '$Roll_no' for key 'PRIMARY'") {
                 echo '<script>alert("INSERTION FAILED!Student with this roll number already exists!")</script>';
             
             }
+            //connection error
             else{
                 echo "Error:"."<br>" . $connection->error;
               }
+            // close the connection
               $connection->close();
         }
      

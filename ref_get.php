@@ -1,10 +1,10 @@
 <?php
-    // Make sure an ID was passed
+    // Make sure an R_id was passed
     if(isset($_GET['R_id'])) {
-    // Get the ID
+    // Get the id
         $id = intval($_GET['R_id']);
      
-        // Make sure the ID is in fact a valid ID
+        // Make sure it is a valid id
         if($id <= 0) {
             die('The ID is invalid!');
         }
@@ -15,7 +15,7 @@
                 die("MySQL connection failed: ". mysqli_connect_error());
             }
      
-            // Fetch the file information
+            //  Query for all Reference notes that satisfy the given condition
             $query = "
                 SELECT  `ref_name`,`Type`,`size`,`Subject`,`Notes`
                 FROM `Reference_Notes`
