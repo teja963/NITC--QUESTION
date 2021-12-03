@@ -114,6 +114,7 @@
               <button type="submit" class="download-button" name= "Submit"> Download Reference notes </button> 
             </div>
           </form>
+          
           <?php
 
             // Connect to the database
@@ -175,7 +176,7 @@
     }
     // Close the mysql connection
     $dbLink->close();
-    ?>
+    ?> 
 
         </div>
       </div>
