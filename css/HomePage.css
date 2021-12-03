@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+.home-top{
+    background-image: url("https://res.cloudinary.com/bhavana2002/image/upload/v1638468377/Welcome_winter_3_vdwlnr.png");
+    background-size: cover;
+}
+
+.homepage-img{
+    width:500px;
+    margin-top: 30px;
+}
+
+.homepage-heading{
+    font-size: 45px;
+    font-weight:500px;
+    margin-bottom: 60px;
+    margin-top:55px;
+    font-family: Baloo Bhaijaan 2;
+}
+
+.homepage-para{
+    font-size:22px;
+    color:black;
+    margin-bottom: 190px;
+    font-family: Montserrat;
+}
+
+.info-details{
+    font-size:20px;
+    color:#323335;
+}
+
+.dropdown-option{
+    border-radius: 5px;
+    padding:6px;
+    color:teal;
+    border-color: teal;
+    background-color: #D8D8D8;
+}
+
+.elective-gap{
+    margin-top: 100px;
+    margin-left: 50px;
+}
+
+.placement-gap{
+    margin-top: 100px;
+    margin-bottom: 60px;
+    margin-right: 50px;
+    background-color: #D8D8D8;
+}
+
+      *{
+          margin: 10;
+          padding: 10;
+       }
+       body{
+          background-color:teal;
+          font-family: sans-serif;
+          background-image: url("https://res.cloudinary.com/bhavana2002/image/upload/v1638510040/rajpath_cmaqgk.jpg");
+          background-size: cover;
+       }
+
+       #name{
+       width: 80%;
+       padding: 5px;
+       border-radius: 5%;
+       outline:0;
+       border: 1px solid lightgreen;
+       }
+
+.home-button{
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    background:teal;
+    color:white;
+    border-radius: 5px;
+    border-style: none;
+    cursor: pointer;
+    width:150px;
+    margin-left:7px;
+}
+
+.placement-card{
+    background-color: #323335;
+}
