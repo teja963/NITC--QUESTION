@@ -1,17 +1,5 @@
-# DBMS_PROJECT:MASTER OVERVIEW
-  <pre>
-  * Jogi
-  * Keerthi
-  * Yuvetha
-  * Bhavana
-  * Teja
-  </pre>
-  
-# NOTE:
- <pre> 
- 1. Everyone need to work on their own branch. If the work of ur part is done merge with master
- 2. Make sure that u r pushing on ur respecitve braches "git pull origin UR_BRANCH_NAME"
- 3. After git pull, u can see the branches of remote repository thorugh "git checkout"
- 4. Each time you need to update both local and remote repository, 
-    otherwise there will be problems for another person
-  </pre>
+# DBMS_PROJECT: OVERVIEW
+	This project is a prototype for NITC Question Bank. This application provides an excellent
+	resource for the NITC students to access the previous year's question papers as well as
+	upload question papers . Students can also navigate through features such as placement
+	information, elective course information, and reference materials
