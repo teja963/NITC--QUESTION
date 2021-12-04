@@ -37,20 +37,18 @@ if(isset($_FILES['uploaded_file']) and isset ($_POST['Submit']))
 				    echo 'Error! Failed to insert the file'
 				       . "<pre>{$dbLink->error}</pre>";
 				}
+        // Close the mysql connection
         $dbLink->close();
     }
+    //print error message
     else {
         echo 'An error accured while the file was being uploaded. '
            . 'Error code: '. intval($_FILES['uploaded_file']['error']);
     }
  
-    // Close the mysql connection
+    
     
 }
-  
- 
-// Echo a link back to the main page
-//echo '<p>Click <a href="qnpaper-upload.php">here</a> to go back</p>';
 
 ?>
 

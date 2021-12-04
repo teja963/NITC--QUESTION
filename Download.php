@@ -40,16 +40,19 @@
             "CSE": ["Maths", "Logic Design", "Program Design", "Discrete Structures", "Computer Organization", "DSA"],
             "CE": ["Mechanics of solids", "Surveying", "Mechanics of fluids", "Building Technology", "Structural analysis"],
             "MSE": ["Structure of materials", "Thermodynamics", "Fluid mechanics", "Heat transfer"],
+            "CH": ["Mechanical Operations", "Material Science", "Heat Transfer", "Fluid Mechanics", "Chemical Technology", "Process Calculations", "Thermodynamics"]
           },
           "3": {
             "CSE": ["PPL", "Theory of Computation", "Database Management Systems", "Operating Systems"],
             "CE": ["Structural design", "Numericsl methods", "Transportation engineering", "Structural analysis"],
-            "MSE": ["Thermal engineering", "Semiconductors nanostructures", "Bio-materials"]
+            "MSE": ["Thermal engineering", "Semiconductors nanostructures", "Bio-materials"],
+            "CH": ["Mass Transfer", "Process Dynamics and Control", "Chemical Reaction Engineering","Thermodynamics","Petroleum Refining Operations AND Processes"]
           },
           "4": {
             "CSE": ["Artificial Intelligence", "ML"],
             "CE": ["Environmental engineering", "Construction management", "Water resource engineering"],
-            "MSE": ["Energy materials and technology", "Corrosion science and engineering", "Industrial Economics"]
+            "MSE": ["Energy materials and technology", "Corrosion science and engineering", "Industrial Economics"],
+            "CH": ["Transport Phenomena", "Chemical Process Optimization" ,"Computer Aided Design"]
           }
         }
         window.onload = function() {
@@ -60,7 +63,7 @@
             YearSel.options[YearSel.options.length] = new Option(x, x);
           }
           YearSel.onchange = function() {
-            //empty Chapters- and Topics- dropdowns
+            //empty Subject- and Branch dropdowns
             SubjectSel.length = 1;
             BranchSel.length = 1;
             //display correct values
@@ -69,7 +72,7 @@
             }
           }
           BranchSel.onchange = function() {
-            //empty Chapters dropdown
+            
             SubjectSel.length = 1;
             //display correct values
             var z = subjectObject[YearSel.value][this.value];
@@ -143,16 +146,16 @@ if(isset($_POST['Submit4']))
 		$sql = "SELECT `Qp_no`, `Qp_name`, `Branch`, `Year`, `Subject` FROM `Question_paper` WHERE '$Branch'=`Branch` AND '$Year'= `Year` AND '$Subject' = `Subject`";
 		$result = $dbLink->query($sql);
 		 
-		
+		     // Execute the query
 		    if($result=$dbLink->query($sql)) {
-			
+			   //chech if the database is empty 
 					if($result->num_rows == 0)
 					{
 						echo '<p>There are no files in the database</p>';
 					}
 					else
 					 {
-						// Print the top of a table
+						// Print the column heading of the table
 						echo '<table width="100%">
 							<tr>
 						

@@ -17,6 +17,30 @@ var Course_IDObject = {
   },
   "CS3007D": {
     "Object Oriented Systems"    : ["Manjusha"]
+  },
+  "CH3028D": {
+    "Fertilizer Technology" : ["Sushmitha"]
+  },
+  "CH3022D": {
+    "Petroleum Refining Operations and Processes" : ["Paneerselvam"]
+  },
+  "CH3029D": {
+    "OPERATIONS RESEARCH" : ["Sudev Das"]
+  },
+  "CH3021D": {
+    "Energy Technology" : ["Dhanya"]
+  },
+  "CH3027D": {
+    "Biotechnology" : ["Swapan Reddy"]
+  },
+  "CE3038D": {
+    "TRAFFIC ENGINEERING" : ["Sivakumar"]
+  },
+  "CE3003D": {
+    "NUMERICAL METHODS IN CIVIL ENGINEERING" : ["Ranjitha"]
+  },
+  "CE3022D": {
+    "CONCRETE TECHNOLOGY" : ["Muthukumar"]
   }
 }
 
@@ -28,8 +52,9 @@ var RoleObject = {
     "JP Morgan" :[]
   },
   "Full Time": {
-    "Amazon" : [],
-    "Cisco" : []
+    "VMWare" : [],
+    "Amdocs" : [],
+    "Visalnc" : []
   }
 }
 

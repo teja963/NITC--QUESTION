@@ -63,19 +63,24 @@
     </header>
     <div class="w3-container">
       <?php
+      // Connect to the database
       $servername="localhost";
       $username="root";
       $password="";
       $database="Nitcq";
       $mysqli=new mysqli($servername,$username,$password,$database);
+
+      //  Fetch last row from the table 'question_paper'
       $query = "SELECT * FROM `Question_paper` ORDER BY `Qp_no`  DESC ";
+       // Execute the query
       if($result = $mysqli->query($query)){
+        // Get the row
         if ($row = $result->fetch_assoc()) {
 
                 $Roll_no = $row["Roll_no"];
                 $Qp_name=$row["Qp_name"];
                
-                           
+    // print notification                    
     echo "<h3>New question paper $Qp_name uploaded by $Roll_no  !</h3>".'<br />';
    
         }

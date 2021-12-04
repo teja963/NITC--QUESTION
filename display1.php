@@ -58,7 +58,8 @@
      <div class="w3-card-4 w3-margin w3-white">
           <div class="w3-container">
 			<?php
-		
+
+		  // Connect to the database
 			if(isset($_POST['Submit'])){
         $host='localhost';
         $user='root';
@@ -69,16 +70,19 @@
 			    $Course_ID = $_POST['Course_ID'];
 			    $Course_name = $_POST['Course_name'];
 			    $Faculty_name = $_POST['Faculty_name'];
-			
+
+			// Fetch elective information from the database
 			$query = "SELECT * FROM `Elective_info` WHERE `Course_id` ='$Course_ID'";
+       // Execute the query
 			    if($result = $mysqli->query($query)){
+            // Get the row
 				    if ($row = $result->fetch_assoc()) {
 
 				            $Course_ID = $row["Course_id"];
 				            $Course_name = $row["course_name"];
 				            $Faculty_name = $row["faculty"];
 				            $elective_info = $row["elective_info"];
-                               
+         // Print data               
 				echo "<h3><b>Name of Elecitve:</b> $Course_ID</h3>".'<br />';
 				echo "<h4><b>Course ID:</b></h4><h5> $Course_name</h5>".'<br />';
 				echo "<h4><b>Faculty_Name:</b></h4><h5> $Faculty_name</h5>".'<br />';
