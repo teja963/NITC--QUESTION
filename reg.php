@@ -34,14 +34,14 @@ else{
 		             }
                 //if the password is wrong
 			     else {
-				 echo '<script>alert("Enter the correct password")</script>';
+				 echo '<script>alert("Incorrect password")</script>';
 			     }
 			    
 		     }
             }
             //incorrect information
             else{
-                echo '<script>alert("Roll no and password do not match ")</script>';
+                echo '<script>alert("Please SignUp into the Page!!")</script>';
             }
      
     }
@@ -101,7 +101,7 @@ else{
                 <h2 style="font-weight:700;" class="pt-3">Welcome to NITC Question Bank</h2>
               </div>
                    <div class="login m-5">
-                      <form action="reg.php" method="POST">
+                      <form action="reg.php" method="POST" >
                         <label>
                             <span style="color: rgb(71, 71, 71);">Roll Number</span>
                             <input type="text" name="Roll_no" required>
@@ -134,22 +134,30 @@ else{
                     <div class="form sign-up">
                         <h2 style="font-weight:700;">Create your Account</h2>
                         <div class="form2" >
-                            <form action ="reg.php" method="POST">
+                            <form action ="reg.php" method="POST" id="form">
                                 <label>
                                     <span style="color: rgb(71, 71, 71);">Roll Number</span>
-                                    <input type="text" name="Roll_no" required/>
+                                    <input type="text" name="Roll_no" id="roll_number" onkeydown="roll_validation()"required/>
+                                    <span id="roll_text"></span>
                                 </label>
                                 <label>
                                     <span style="color: rgb(71, 71, 71);">First Name</span>
-                                    <input type="text" name="First_name" required/>
+                                    <input type="text" name="First_name" id="first_name" onkeydown="first_name_validation()"required/>
+                                    <span id="first_name_text"></span>
                                 </label>
                                 <label>
-                                    <span style="color: rgb(71, 71, 71);">Last Name</span>
-                                    <input type="text" name="Last_name" required />
+                                        <span style="color: rgb(71, 71, 71);">Last Name</span>
+                                        <input type="text" name="Last_name" id="last_name" onkeydown="last_name_validation()"required />
+                                        <span id="last_name_text"></span>
                                 </label>  
                                 <label>
-                                    <span style="color: rgb(71, 71, 71);">Email</span>
-                                    <input type="text" name="Email_id" required/>
+                                
+
+                                        <span style="color: rgb(71, 71, 71);">Email</span>
+                                        <input type="text" name="Email_id" id="email" onkeydown="email_validation()"required>            
+                                        <span id="email_text"></span>
+          
+                                    
                                 </label>
                                 <label>
                                     <span style="color: rgb(71, 71, 71);">Branch</span>
@@ -157,7 +165,8 @@ else{
                                 </label>
                                 <label>
                                     <span style="color: rgb(71, 71, 71);">Mobile</span>
-                                    <input type="text" name="Mobile" required/>
+                                    <input type="text" name="Mobile" id="mobile" onkeydown="mobile_validation()"required/>
+                                    <span id="mobile_text"></span>
                                 </label>
                                 <label>
                                     <span style="color: rgb(71, 71, 71);">Password</span>
@@ -172,7 +181,119 @@ else{
           </div>
       </div>
   
-      <script>
+      <script type="text/javascript">
+          function roll_validation()
+         {
+            var form=document.getElementById("form");
+            var roll=document.getElementById("roll_number").value;
+            var roll_text=document.getElementById("roll_text");
+            var pattern = /^[a-zA-Z0-9]*$/;
+            if(roll.length==9&&roll.match(pattern)) 
+            {
+               form.classList.add("valid");
+               form.classList.remove("invalid");
+               roll_text.innerHTML="Your Roll Number is Valid";
+               roll_text.style.color="#00ff00";
+               
+            }
+            else
+            {
+               form.classList.remove("valid");
+               form.classList.add("invalid"); 
+               roll_text.innerHTML="Please Enter Valid Roll Number!!";
+               roll_text.style.color="#ff0000"; 
+            }
+         }
+         function first_name_validation()
+         {
+            var form=document.getElementById("form");
+            var first_name=document.getElementById("first_name").value;
+            var first_name_text=document.getElementById("first_name_text");
+            var pattern = /^[a-zA-Z]*$/;
+            if(first_name.match(pattern)&&first_name.length!=0) 
+            {
+               form.classList.add("valid");
+               form.classList.remove("invalid");
+               first_name_text.innerHTML="Your Name contains only letters";
+               first_name_text.style.color="#00ff00";
+               
+            }
+            else
+            {
+               form.classList.remove("valid");
+               form.classList.add("invalid"); 
+               first_name_text.innerHTML="Please Enter only letters";
+               first_name_text.style.color="#ff0000"; 
+            }
+         }
+         function last_name_validation()
+         {
+            var form=document.getElementById("form");
+            var last_name=document.getElementById("last_name").value;
+            var last_name_text=document.getElementById("last_name_text");
+            var pattern = /^[a-zA-Z]*$/;
+            if(last_name.match(pattern)&&last_name.length!=0) 
+            {
+               form.classList.add("valid");
+               form.classList.remove("invalid");
+               last_name_text.innerHTML="Your Name contains only letters";
+               last_name_text.style.color="#00ff00";
+               
+            }
+            else
+            {
+               form.classList.remove("valid");
+               form.classList.add("invalid"); 
+               last_name_text.innerHTML="Please Enter only letters";
+               last_name_text.style.color="#ff0000"; 
+            }
+         }
+         function email_validation()
+         {
+            var form=document.getElementById("form");
+            var email=document.getElementById("email").value;
+            var email_text=document.getElementById("email_text");
+            var pattern = /^[a-zA-Z0-9]+_[a-zA-Z0-9]+@[a-z]+.[a-z]+.[a-z]+(?:\.[a-z]+)*$/;
+            
+            if(email.match(pattern)) 
+            {
+               form.classList.add("valid");
+               form.classList.remove("invalid");
+               email_text.innerHTML="Your Email is Valid";
+               email_text.style.color="#00ff00";
+               
+            }
+            else
+            {
+               form.classList.remove("valid");
+               form.classList.add("invalid"); 
+               email_text.innerHTML="Please Enter Valid NITC-Email";
+               email_text.style.color="#ff0000"; 
+            }
+         }
+         function mobile_validation()
+         {
+            var form=document.getElementById("form");
+            var mobile=document.getElementById("mobile").value;
+            var mobile_text=document.getElementById("mobile_text");
+            var pattern = /^[0-9]+$/;
+            
+            if(mobile.match(pattern)&&mobile.length==10) 
+            {
+               form.classList.add("valid");
+               form.classList.remove("invalid");
+               mobile_text.innerHTML="Your Mobile Number is Valid";
+               mobile_text.style.color="#00ff00";
+               
+            }
+            else
+            {
+               form.classList.remove("valid");
+               form.classList.add("invalid"); 
+               mobile_text.innerHTML="Please Enter Valid mobile Number";
+               mobile_text.style.color="#ff0000"; 
+            }
+         }
           document.querySelector('.img__btn').addEventListener('click', function() {
               document.querySelector('.cont').classList.toggle('s--signup');
           });

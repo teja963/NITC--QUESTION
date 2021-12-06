@@ -98,7 +98,7 @@
   </div><br>
  </div>
       <footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
-        <a href="Homepage.php#PlacementInfo" ><button class="w3-button w3-teal   w3-padding-large w3-margin-bottom w3-theme-l1">Previous</button></a>
+        <a href="HomePage.php" ><button class="w3-button w3-teal   w3-padding-large w3-margin-bottom w3-theme-l1">Previous</button></a>
      </footer>
   </body>
 </html>

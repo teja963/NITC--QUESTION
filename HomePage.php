@@ -158,7 +158,7 @@
         information here. Select the course id and <br> the respective course name and faculty name, to get the required information.</p>
     </div>
     <div class="w3-col m5">
-      <form class="w3-container w3-card-4 w3-padding-16" style="background-color: #D8D8D8;" action="display1.php" target="_blank" method="POST" >
+      <form class="w3-container w3-card-4 w3-padding-16" style="background-color: #D8D8D8;" action="display1.php"  method="POST" >
             <table>
                 <tr>
                   <td>
@@ -203,7 +203,7 @@
         Helping you ace it, <br> from coding round to HR interview, we've got the <br>  interview experience one should know before going for it.</p>
     </div>
     <div class="w3-col m5">
-      <form class="w3-container w3-card-4 w3-padding-16 placement-card" action="display2.php" target="_blank" method="POST">
+      <form class="w3-container w3-card-4 w3-padding-16 placement-card" action="display2.php"  method="POST">
               <h1 class="info-details" style="color:#ebe8e5;">Role:</h1> 
               <select class = "dropdown-option" name="Role" id="Role" required>
                   <option value="" selected="selected">Please select Role</option>
