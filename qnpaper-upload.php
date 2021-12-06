@@ -28,14 +28,12 @@ if(isset($_FILES['uploaded_file']) and isset ($_POST['Submit']))
  
         // Execute the query
         $result = $dbLink->query($query);
- 
                          // Check if it was successfull
 				if($result) {
 				    echo '<script>alert("Success! Your file was successfully added!")</script>';
 				}
 				else {
-				    echo 'Error! Failed to insert the file'
-				       . "<pre>{$dbLink->error}</pre>";
+				    echo '<script>alert("Error! Failed to insert the file, size is too large")</script>';
 				}
         // Close the mysql connection
         $dbLink->close();

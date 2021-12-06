@@ -54,7 +54,7 @@ var RoleObject = {
   "Full Time": {
     "VMWare" : [],
     "Amdocs" : [],
-    "Visalnc" : []
+    "VisaInc" : []
   }
 }
 
