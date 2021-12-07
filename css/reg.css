@@ -30,7 +30,7 @@ button {
     overflow: hidden;
     position: relative;
     width: 900px;
-    height: 2000px;
+    height: 1000px;
     margin: 0 auto 100px;
     background: #fff;
     box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.3), 10px 10px 15px rgba(70, 70, 70, 0.15), inset -10px -10px 15px rgba(255, 255, 255, 0.3), inset 10px 10px 15px rgba(70, 70, 70, 0.15);
@@ -265,6 +265,10 @@ input {
     padding:5px;
     color:white;
     border-style: none;
+}
+
+.submit{
+    margin-top:30px;
 }
 
 .fb-btn {
